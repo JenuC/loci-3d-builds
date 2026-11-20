@@ -1,0 +1,15 @@
+[project]
+name = "u760-u651-stage-adapter"
+version = "0.1.0"
+description = "Parametric CAD, structural dynamics, and automated verification pipeline for the PI U-760 XY Stage to PI U-651 Rotational Stage microscope adapter."
+readme = "docs/implementation_plan.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "build123d>=0.13.0",
+    "matplotlib>=3.9.0",
+    "numpy>=2.0.0",
+    "scipy>=1.14.0",
+]
+
+[tool.uv]
+package = false
