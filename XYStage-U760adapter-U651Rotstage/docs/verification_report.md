@@ -1,7 +1,7 @@
 # Automated CAD Verification Report: PI U-760 to U-651 Adapter
 
-- **Overall Status:** **FAIL** (12/15 checks passed)
-- **Generated:** `2026-11-20 21:12:33 UTC`
+- **Overall Status:** **PASS** (15/15 checks passed)
+- **Generated:** `2026-11-20 21:18:19 UTC`
 - **Parameter Source:** `params.json` (`reference_status`: `datasheet_baseline_placeholders`)
 - **Verified Artifacts:**
   - `output/u760_to_u651_adapter_aluminum.step`
@@ -14,13 +14,13 @@
 
 | Status | Category | Check | Measured Value | Requirement |
 | :---: | :--- | :--- | :--- | :--- |
-| PASS | a. Solid Validity | Adapter (aluminum) solid validity & volume | solids=1, valid=True, vol=75042.50 mm³ | >= 1 valid solid, volume > 0 mm³ |
-| PASS | a. Solid Validity | Adapter (pla_prototype) solid validity & volume | solids=1, valid=True, vol=96053.63 mm³ | >= 1 valid solid, volume > 0 mm³ |
+| PASS | a. Solid Validity | Adapter (aluminum) solid validity & volume | solids=1, valid=True, vol=71068.38 mm³ | >= 1 valid solid, volume > 0 mm³ |
+| PASS | a. Solid Validity | Adapter (pla_prototype) solid validity & volume | solids=1, valid=True, vol=90877.16 mm³ | >= 1 valid solid, volume > 0 mm³ |
 | PASS | b. Bounding Box Accuracy | Adapter (aluminum) X × Y × Z envelope | 128.000 × 100.000 × 10.000 mm (Z: 0.000..10.000 mm; max err 0.0000 mm) | 128.00 × 100.00 × 10.00 mm (±0.05 mm) |
 | PASS | b. Bounding Box Accuracy | Adapter (pla_prototype) X × Y × Z envelope | 128.000 × 100.000 × 12.000 mm (Z: 0.000..12.000 mm; max err 0.0000 mm) | 128.00 × 100.00 × 12.00 mm (±0.05 mm) |
-| **FAIL** | c. Clear Optical Aperture | Ø36.0 mm beam path through Adapter (aluminum) | 3562.566069 mm³ | 0.0 mm³ (Ø36.0 mm, Z = -25..+35 mm) |
-| **FAIL** | c. Clear Optical Aperture | Ø36.0 mm beam path through Adapter (pla_prototype) | 4580.442089 mm³ | 0.0 mm³ (Ø36.0 mm, Z = -25..+35 mm) |
-| **FAIL** | c. Clear Optical Aperture | Ø36.0 mm beam path through Full Assembly (U-760 + Adapter + U-651) | 3562.566069 mm³ | 0.0 mm³ (Ø36.0 mm, Z = -25..+35 mm) |
+| PASS | c. Clear Optical Aperture | Ø36.0 mm beam path through Adapter (aluminum) | 0.000000 mm³ | 0.0 mm³ (Ø36.0 mm, Z = -25..+35 mm) |
+| PASS | c. Clear Optical Aperture | Ø36.0 mm beam path through Adapter (pla_prototype) | 0.000000 mm³ | 0.0 mm³ (Ø36.0 mm, Z = -25..+35 mm) |
+| PASS | c. Clear Optical Aperture | Ø36.0 mm beam path through Full Assembly (U-760 + Adapter + U-651) | 0.000000 mm³ | 0.0 mm³ (Ø36.0 mm, Z = -25..+35 mm) |
 | PASS | d. Assembly Interference | Assembly component solid count | 3 solids | >= 3 solids (U-760, Adapter, U-651) |
 | PASS | d. Assembly Interference | U-760 Stage (Mock) vs. Adapter (Aluminum) | 0.000000 mm³ | 0.0 mm³ (zero collision) |
 | PASS | d. Assembly Interference | U-760 Stage (Mock) vs. U-651 Stage (Mock) | 0.000000 mm³ | 0.0 mm³ (zero collision) |
@@ -37,7 +37,7 @@
 | Component | Z Range (mm) | Volume (mm³) |
 | :--- | :---: | :---: |
 | U-760 Stage (Mock) | `-18.00` to `+0.00` | `265846.94` |
-| Adapter (Aluminum) | `+0.00` to `+10.00` | `75042.50` |
+| Adapter (Aluminum) | `+0.00` to `+10.00` | `71068.38` |
 | U-651 Stage (Mock) | `+10.00` to `+24.00` | `79987.45` |
 
 ---
