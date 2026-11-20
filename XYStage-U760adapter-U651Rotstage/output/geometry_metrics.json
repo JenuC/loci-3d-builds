@@ -1,0 +1,74 @@
+{
+  "aluminum": {
+    "variant": "aluminum",
+    "label": "CNC Aluminum (Al 6061-T6 / MIC-6)",
+    "is_valid": true,
+    "volume_mm3": 71068.378,
+    "bounding_box_mm": {
+      "min": [
+        -64.0,
+        -50.0,
+        0.0
+      ],
+      "max": [
+        64.0,
+        50.0,
+        10.0
+      ],
+      "size": [
+        128.0,
+        100.0,
+        10.0
+      ]
+    },
+    "center_of_mass_mm": [
+      0.0202,
+      -0.0896,
+      5.8067
+    ],
+    "mass_kg_by_material": {
+      "Al_6061_T6": 0.191885,
+      "Al_7075_T6": 0.199702,
+      "Al_MIC6": 0.198991,
+      "PLA_FDM": 0.088125,
+      "PETG_FDM": 0.090257,
+      "PA12_CF_FDM": 0.085282
+    }
+  },
+  "pla_prototype": {
+    "variant": "pla_prototype",
+    "label": "3D-Printed Fit-Check Prototype (PLA / PLA+)",
+    "is_valid": true,
+    "volume_mm3": 90877.164,
+    "bounding_box_mm": {
+      "min": [
+        -64.0,
+        -50.0,
+        0.0
+      ],
+      "max": [
+        64.0,
+        50.0,
+        12.0
+      ],
+      "size": [
+        128.0,
+        100.0,
+        12.0
+      ]
+    },
+    "center_of_mass_mm": [
+      0.0226,
+      -0.0793,
+      6.8536
+    ],
+    "mass_kg_by_material": {
+      "Al_6061_T6": 0.245368,
+      "Al_7075_T6": 0.255365,
+      "Al_MIC6": 0.254456,
+      "PLA_FDM": 0.112688,
+      "PETG_FDM": 0.115414,
+      "PA12_CF_FDM": 0.109053
+    }
+  }
+}

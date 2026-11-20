@@ -1,0 +1,155 @@
+{
+  "_metadata": {
+    "description": "Single source of truth for PI U-760 XY Stage to PI U-651 Rotation Stage Adapter CAD & Dynamics.",
+    "units": "mm, kg, deg, N, Pa",
+    "reference_status": "datasheet_baseline_placeholders",
+    "note": "Update u760_interface and u651_interface hole coordinates from official PI STEP/PDF drawings in reference/ and re-run generate_adapter.py."
+  },
+  "optical": {
+    "u651_clear_aperture_dia_mm": 36.0,
+    "adapter_clear_aperture_dia_mm": 38.0,
+    "bottom_objective_chamfer_mm": 2.0
+  },
+  "u760_interface": {
+    "source": "placeholder_datasheet_estimate",
+    "stage_travel_xy_mm": [25.0, 25.0],
+    "stage_max_velocity_mm_s": 100.0,
+    "stage_assumed_accel_m_s2": 2.0,
+    "adapter_outer_x_mm": 128.0,
+    "adapter_outer_y_mm": 100.0,
+    "corner_fillet_mm": 6.0,
+    "mounting_holes_xy_mm": [
+      [-54.0, -40.0],
+      [ 54.0, -40.0],
+      [ 54.0,  40.0],
+      [-54.0,  40.0]
+    ],
+    "fastener_type": "M4_SHCS_top_down",
+    "hole_clearance_dia_mm": 4.5,
+    "counterbore_dia_mm": 8.0,
+    "counterbore_depth_mm": 4.6,
+    "dowel_pin_holes_xy_mm": [
+      [-54.0, 0.0],
+      [ 54.0, 0.0]
+    ],
+    "dowel_pin_dia_mm": 3.0,
+    "platform_mock_thickness_mm": 18.0,
+    "platform_mock_aperture_dia_mm": 64.0
+  },
+  "u651_interface": {
+    "source": "PI_MP136E_datasheet_plus_placeholder_pitch",
+    "stage_mass_kg": 0.500,
+    "stage_outer_x_mm": 95.0,
+    "stage_outer_y_mm": 71.0,
+    "stage_height_mm": 14.0,
+    "stage_cog_z_above_base_mm": 7.0,
+    "flatness_requirement_um": 10.0,
+    "mounting_holes_xy_mm": [
+      [-37.5, -27.5],
+      [ 37.5, -27.5],
+      [ 37.5,  27.5],
+      [-37.5,  27.5]
+    ],
+    "fastener_type": "M4_SHCS_bottom_up",
+    "recommended_torque_Nm": 2.1,
+    "hole_clearance_dia_mm": 4.5,
+    "counterbore_dia_mm": 8.0,
+    "counterbore_depth_mm": 4.6,
+    "mounting_pad_dia_mm": 16.0,
+    "mounting_pad_proud_height_mm": 0.5,
+    "cable_relief_side": "-X",
+    "cable_slot_width_mm": 14.0,
+    "cable_slot_depth_mm": 4.0,
+    "pe_ground_hole_xy_mm": [-47.5, -18.0]
+  },
+  "variants": {
+    "aluminum": {
+      "label": "CNC Aluminum (Al 6061-T6 / MIC-6)",
+      "total_height_mm": 10.0,
+      "top_deck_thickness_mm": 4.0,
+      "rib_width_mm": 3.5,
+      "outer_wall_thickness_mm": 5.0,
+      "aperture_collar_wall_mm": 5.0,
+      "pocket_fillet_mm": 3.0,
+      "fdm_clearance_adder_mm": 0.0
+    },
+    "pla_prototype": {
+      "label": "3D-Printed Fit-Check Prototype (PLA / PLA+)",
+      "total_height_mm": 12.0,
+      "top_deck_thickness_mm": 5.0,
+      "rib_width_mm": 4.5,
+      "outer_wall_thickness_mm": 6.0,
+      "aperture_collar_wall_mm": 6.0,
+      "pocket_fillet_mm": 3.0,
+      "fdm_clearance_adder_mm": 0.25
+    }
+  },
+  "materials": {
+    "Al_6061_T6": {
+      "name": "Aluminum 6061-T6 (CNC)",
+      "E_GPa": 68.9,
+      "nu": 0.33,
+      "density_kg_m3": 2700.0,
+      "damping_ratio": 0.002,
+      "cte_ppm_K": 23.6,
+      "achievable_flatness_um": 8.0,
+      "creep_under_preload": "None",
+      "variant": "aluminum"
+    },
+    "Al_7075_T6": {
+      "name": "Aluminum 7075-T6 (CNC)",
+      "E_GPa": 71.7,
+      "nu": 0.33,
+      "density_kg_m3": 2810.0,
+      "damping_ratio": 0.002,
+      "cte_ppm_K": 23.4,
+      "achievable_flatness_um": 8.0,
+      "creep_under_preload": "None",
+      "variant": "aluminum"
+    },
+    "Al_MIC6": {
+      "name": "Aluminum MIC-6 Cast Plate (CNC)",
+      "E_GPa": 71.0,
+      "nu": 0.33,
+      "density_kg_m3": 2800.0,
+      "damping_ratio": 0.0025,
+      "cte_ppm_K": 23.6,
+      "achievable_flatness_um": 5.0,
+      "creep_under_preload": "None",
+      "variant": "aluminum"
+    },
+    "PLA_FDM": {
+      "name": "PLA / PLA+ (FDM 3D Print, 100% infill)",
+      "E_GPa": 3.0,
+      "nu": 0.36,
+      "density_kg_m3": 1240.0,
+      "damping_ratio": 0.035,
+      "cte_ppm_K": 68.0,
+      "achievable_flatness_um": 180.0,
+      "creep_under_preload": "High (bolts relax)",
+      "variant": "pla_prototype"
+    },
+    "PETG_FDM": {
+      "name": "PETG (FDM 3D Print, 100% infill)",
+      "E_GPa": 2.1,
+      "nu": 0.38,
+      "density_kg_m3": 1270.0,
+      "damping_ratio": 0.04,
+      "cte_ppm_K": 60.0,
+      "achievable_flatness_um": 180.0,
+      "creep_under_preload": "High",
+      "variant": "pla_prototype"
+    },
+    "PA12_CF_FDM": {
+      "name": "CF-Nylon / PA12-CF (FDM 3D Print)",
+      "E_GPa": 8.0,
+      "nu": 0.35,
+      "density_kg_m3": 1200.0,
+      "damping_ratio": 0.02,
+      "cte_ppm_K": 40.0,
+      "achievable_flatness_um": 150.0,
+      "creep_under_preload": "Moderate (needs metal inserts)",
+      "variant": "pla_prototype"
+    }
+  }
+}
